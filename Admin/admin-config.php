@@ -28,3 +28,4 @@ define('CSS_PATH', 'css/');
 define('REUSE_PATH', 'reuse/');
 define('DATABASE_PATH', 'database/');
 define('XULY_PATH', 'xuly/');
+define('FEATURES_PATH', 'features/');
