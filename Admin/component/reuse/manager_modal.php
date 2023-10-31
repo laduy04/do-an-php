@@ -1,42 +1,60 @@
+<?php
+require_once($level . XULY_PATH . 'dsdh.php');
+?>
 <div class="container-fluid">
-        <div class="border mt-3">
-          <h4 class="text-center mt-3 mb-4">Quản lí đơn hàng</h4>
-          <div class="row">
-            <div class="show-page mb-3 ml-3">
-              Hiển thị <span> <select id="show" onclick="select_page()">
-                  <option value="10">
-                    10
-                  </option>
-                  <option value="20">
-                    20
-                  </option>
-                  <option value="50">
-                    50
-                  </option>
-                </select></span> cột
-            </div>
-            <div class="show-page " style="margin-left: 50px;">
+  <div class="border mt-3">
+    <h4 class="text-center mt-3 mb-4">Quản lí đơn hàng</h4>
+    <div class="row">
+      <div class="show-page mb-3 ml-3">
+        Hiển thị <span> <select id="show" onclick="select_page()">
+            <option value="10">
+              10
+            </option>
+            <option value="20">
+              20
+            </option>
+            <option value="50">
+              50
+            </option>
+          </select></span> cột
+      </div>
+      <div class="show-page " style="margin-left: 50px;">
 
-              Tìm kiếm <span> <input id="myInput" style="padding-left: 15px; border: 0.5px solid grey;" type="text"
-                  placeholder="Search.."></span>
-            </div>
-          </div>
-          <table class="table table-hover table-text-center" id="receipt-table">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">Mã đơn hàng</th>
-                <th scope="col">Mã khách hàng</th>
+        Tìm kiếm <span> <input id="myInput" style="padding-left: 15px; border: 0.5px solid grey;" type="text" placeholder="Search.."></span>
+      </div>
+    </div>
+    <table class="table table-hover table-text-center" id="receipt-table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Mã đơn hàng</th>
+          <th scope="col">Mã khách hàng</th>
 
-                <th scope="col">Tổng giá trị</th>
-                <th scope="col">Ngày lập</th>
+          <th scope="col">Tổng giá trị</th>
+          <th scope="col">Ngày lập</th>
 
-                <th scope="col">Chi tiết đơn hàng</th>
-                <th scope="col">Xác nhận đơn hàng</th>
+          <th scope="col"><a href="#">Thêm</a></th>
+          <!-- <th scope="col">Chi tiết đơn hàng</th>
+          <th scope="col">Xác nhận đơn hàng</th> -->
 
-              </tr>
-            </thead>
-            <tbody id="content-table">
-              <tr>
+        </tr>
+      </thead>
+      <tbody id="content-table">
+        <?php
+        foreach ($dsdh as $dh) {
+          echo '  <tr>
+                <td>' . $dh['ma_dh'] . '</td>
+                <td>' . $dh['ma_kh'] . '</td>
+
+                <td>
+                  ' . $dh['tong_gia_tri'] . '
+                </td>
+                <td>
+                  ' . $dh['ngay_lap'] . '
+                </td>
+                </tr>';
+        }
+        ?>
+        <!-- <tr>
                 <td>DH01</td>
                 <td>KH01</td>
 
@@ -51,7 +69,7 @@
                       class="fa fa-external-link-alt"></i></a>
 
 
-                  <!-- Modal -->
+                   Modal 
 
                 </td>
                 <td class="confirm">
@@ -498,11 +516,7 @@
 
                 </td>
               </tr>
-            </tbody>
-
-
-
-          </table>
+               </table>
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog  detail-modal">
@@ -566,26 +580,27 @@
                       <td><span title="Số điện thoại">Trắng</span></td>
                       <td style="min-width: 300px;">1</th>
                       <td style="min-width: 300px;">23.000.000<span style="text-decoration: underline;">đ</span></th>
-                    </tr>
-                  </table>
+                    </tr> -->
+      </tbody>
+    </table>
 
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="page-navigation">
-          <div class="beta"> <button onclick="previous_page()"> Trước</button>
-            <span id="page-number">
+    <!-- </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="page-navigation">
+  <div class="beta"> <button onclick="previous_page()"> Trước</button>
+    <span id="page-number">
 
-            </span>
-            <button onclick="next_page()"> Sau</button>
-          </div>
-        </div>
+    </span>
+    <button onclick="next_page()"> Sau</button>
+  </div>
+</div>
 
 
-      </div>
-    </div>
+</div>
+</div> -->

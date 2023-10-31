@@ -1,3 +1,6 @@
+<?php
+require_once($level . XULY_PATH . 'thuonghieu.php');
+?>
 <div class="container-fluid" style="height: 100vh;">
     <div class="mb-5 mt-3 ">
         <div class="content">
@@ -36,7 +39,22 @@
                                             </tr>
                                         </thead>
                                         <tbody id="content-table">
-                                            <tr>
+                                            <?php
+                                            foreach ($dsth as $th) {
+                                                echo '<tr>
+                                                <td>' . $th['ma_th'] . '</td>
+                                                <td>' . $th['ten_thuong_hieu'] . '</td>
+
+
+                                                <td>' . $th['so_luong_dt'] . '</td>
+
+                                                <td class="row" style="border: none;">
+                                                    <button class="edit3 btn btn-danger" data-toggle="modal" data-target="#del" style="margin: auto;" title=' . 'Xóa thương hiệu' . '><i class="txt-center menu-icon fas fa-trash-alt"></i></button>
+                                                </td>
+                                            </tr>';
+                                            }
+                                            ?>
+                                            <!-- <tr>
                                                 <td>TH01</td>
                                                 <td>Apple</td>
 
@@ -113,6 +131,6 @@
                                                 <td class="row" style="border: none;">
                                                     <button class="edit3 btn btn-danger" data-toggle="modal" data-target="#del" style="margin: auto;" title='Xóa thương hiệu'><i class="txt-center menu-icon fas fa-trash-alt"></i></button>
                                                 </td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
