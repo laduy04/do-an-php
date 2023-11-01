@@ -14,7 +14,7 @@
         <div class="list-group list-group-flush">
             <ul>
                 <li>
-                    <a href=<?php echo $level . "admin.php" ?> class="list-group-item list-group-item-action  
+                    <a href=<?php echo $level . "index.php" ?> class="list-group-item list-group-item-action  
                     <?php if ($page == 'home') {
                         echo 'active';
                     } ?>"> Trang chủ <i class="menu-icon fa fa-laptop"></i></a>
