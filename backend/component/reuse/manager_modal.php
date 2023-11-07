@@ -20,7 +20,7 @@ require_once($level . XULY_PATH . 'dsdh.php');
       </div>
       <div class="show-page " style="margin-left: 50px;">
 
-        Tìm kiếm <span> <input id="myInput" style="padding-left: 15px; border: 0.5px solid grey;" type="text" placeholder="Search.."></span>
+        Tìm kiếm <form action="" method="post"></form>
       </div>
     </div>
     <table class="table table-hover table-text-center" id="receipt-table">
@@ -32,9 +32,10 @@ require_once($level . XULY_PATH . 'dsdh.php');
           <th scope="col">Tổng giá trị</th>
           <th scope="col">Ngày lập</th>
 
-          <th scope="col"><a href="#">Thêm</a></th>
-          <!-- <th scope="col">Chi tiết đơn hàng</th>
-          <th scope="col">Xác nhận đơn hàng</th> -->
+          <th scope="col">Trạng thái</th>
+
+          <th scope="col"></th>
+
 
         </tr>
       </thead>
@@ -51,6 +52,11 @@ require_once($level . XULY_PATH . 'dsdh.php');
                 <td>
                   ' . $dh['ngay_lap'] . '
                 </td>
+                <td>
+                ' . $dh['trang_thai'] . '
+                </td>
+                <td><a href="../features/updateform.php">Sửa</a></td>
+               
                 </tr>';
         }
         ?>
