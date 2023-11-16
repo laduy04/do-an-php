@@ -1,5 +1,5 @@
 <?php
-define('COMPONENT_PATH', 'component/');
+define('COMPONENTS_PATH', 'components/');
 define('CONTENT_PATH', 'content/');
 define('FOOTER_PATH', 'footer/');
 define('HEADER_PATH', 'header/');

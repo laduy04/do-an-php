@@ -1,6 +1,6 @@
 <script src=<?php echo $level . VENDOR_PATH . JQUERY_PATH . "jquery.min.js" ?>></script>
 <script src=<?php echo $level . VENDOR_PATH . BOOTSTRAP_PATH . JS_PATH . "bootstrap.bundle.min.js" ?>></script>
-<script src=<?php echo $level . JS_ADMIN_PATH . "divide-page.js" ?>></script>
+<script src=<?php echo $level . JS_PATH . "divide-page.js" ?>></script>
 <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
@@ -14,7 +14,7 @@
     });
 </script>
 
-<!-- search -->
+<!-- search
 <script>
     $(document).ready(function() {
         $("#myInput").on("keyup", function() {
@@ -25,4 +25,4 @@
         });
     });
 </script>
-</div>
+</div> -->
